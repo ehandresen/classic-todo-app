@@ -1,7 +1,31 @@
+import { useState } from 'react';
 import './App.css';
+import todoService from './services/todoService';
+import { useEffect } from 'react';
 
 const App = () => {
-  return <h1>Hello World!</h1>;
+  const [todos, setTodos] = useState([]);
+
+  console.log('todo count:', todos.length);
+
+  useEffect(() => {
+    console.log('useEffect');
+    todoService
+      .getAll()
+      .then((response) => {
+        console.log('promise resolved');
+        return response.json();
+      })
+      .then((json) => setTodos(json));
+  }, []);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>{todo.text}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default App;
