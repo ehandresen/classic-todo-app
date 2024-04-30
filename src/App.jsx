@@ -6,9 +6,11 @@ import { useEffect } from 'react';
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState({});
+  const [id, setId] = useState(0);
 
   console.log('todo count:', todos.length);
 
+  // Get all todos from database (json-server)
   useEffect(() => {
     console.log('useEffect');
     todoService
@@ -38,6 +40,23 @@ const App = () => {
     setTodos([...todos, newTodo]);
   }
 
+  // ID
+  function handleId(event) {
+    const idInput = parseInt(event.target.value);
+    setId(idInput);
+  }
+
+  // DELETE
+  function handleDelete() {
+    todoService.deleteTodo(id).then(() => {
+      console.log('Successfully deleted todo with id:', id);
+
+      const updatedTodos = todos.filter((todo) => todo.id !== id);
+
+      setTodos(updatedTodos);
+    });
+  }
+
   return (
     <>
       {/* GET */}
@@ -47,6 +66,7 @@ const App = () => {
           <li key={todo.id}>{todo.text}</li>
         ))}
       </ul>
+      <br />
 
       {/* POST/CREATE */}
       <h2>CREATE todo</h2>
@@ -54,6 +74,13 @@ const App = () => {
       <input onChange={handleNewTodo} type="text" id="addTodo" />
       <button onClick={handleAdd}>Add</button>
       <p>{newTodo.text}</p>
+      <br />
+
+      {/* UPDATE  */}
+      <h2>DELETE todo</h2>
+      <label htmlFor="delete">Id:</label>
+      <input onChange={handleId} type="text" id="delete" />
+      <button onClick={handleDelete}>Delete</button>
     </>
   );
 };

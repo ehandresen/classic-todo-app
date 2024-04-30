@@ -1,16 +1,6 @@
 {
   "todos": [
     {
-      "id": "1",
-      "text": "First task!",
-      "completed": true
-    },
-    {
-      "id": "2",
-      "text": "Seconds todo task",
-      "completed": false
-    },
-    {
       "id": "0664",
       "text": "item 3",
       "completed": false

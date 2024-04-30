@@ -19,7 +19,14 @@ function create(newObject) {
   );
 }
 
+function deleteTodo(id) {
+  return fetch(`${endpoint}/${id}`, {
+    method: 'DELETE',
+  });
+}
+
 export default {
   getAll: getAll,
   create: create,
+  deleteTodo: deleteTodo,
 };
