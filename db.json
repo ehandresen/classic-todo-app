@@ -1,6 +1,59 @@
 {
   "todos": [
-    { "id": "1", "text": "First task!", "completed": true },
-    { "id": "2", "text": "Seconds todo task", "completed": false }
+    {
+      "id": "1",
+      "text": "First task!",
+      "completed": true
+    },
+    {
+      "id": "2",
+      "text": "Seconds todo task",
+      "completed": false
+    },
+    {
+      "id": "0664",
+      "text": "item 3",
+      "completed": false
+    },
+    {
+      "id": "9f13",
+      "text": "item 4",
+      "completed": true
+    },
+    {
+      "id": "1ea5",
+      "text": "item 5",
+      "completed": false
+    },
+    {
+      "id": "9c29",
+      "text": "item 5",
+      "completed": false
+    },
+    {
+      "id": "7352",
+      "text": "item 5",
+      "completed": false
+    },
+    {
+      "id": "7039",
+      "text": "item 5",
+      "completed": false
+    },
+    {
+      "id": "c232",
+      "text": "item 5",
+      "completed": false
+    },
+    {
+      "id": "249e",
+      "text": "item 5",
+      "completed": false
+    },
+    {
+      "id": "020c",
+      "text": "GO TO GYM!",
+      "completed": true
+    }
   ]
 }
