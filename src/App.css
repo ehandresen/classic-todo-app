@@ -4,3 +4,11 @@
   padding: 2rem;
   /* text-align: center; */
 }
+
+li {
+  margin-bottom: 10px;
+  border: 2px solid coral;
+  max-width: 200px;
+  padding: 10px;
+  list-style: none;
+}

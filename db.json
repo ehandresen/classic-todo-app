@@ -1,49 +1,24 @@
 {
   "todos": [
     {
-      "id": "0664",
-      "text": "item 3",
-      "completed": false
-    },
-    {
-      "id": "9f13",
-      "text": "item 4",
-      "completed": true
-    },
-    {
-      "id": "1ea5",
-      "text": "item 5",
-      "completed": false
-    },
-    {
-      "id": "9c29",
-      "text": "item 5",
-      "completed": false
-    },
-    {
-      "id": "7352",
-      "text": "item 5",
-      "completed": false
-    },
-    {
-      "id": "7039",
-      "text": "item 5",
-      "completed": false
-    },
-    {
-      "id": "c232",
-      "text": "item 5",
-      "completed": false
-    },
-    {
       "id": "249e",
-      "text": "item 5",
-      "completed": false
+      "text": "Updated todo",
+      "completed": true
     },
     {
       "id": "020c",
       "text": "GO TO GYM!",
       "completed": true
+    },
+    {
+      "id": "87d7",
+      "text": "New todo!",
+      "completed": false
+    },
+    {
+      "id": "a6ed",
+      "text": "new object",
+      "completed": false
     }
   ]
 }

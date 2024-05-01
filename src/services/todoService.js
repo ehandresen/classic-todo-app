@@ -19,6 +19,16 @@ function create(newObject) {
   );
 }
 
+function update(updatedObject, id) {
+  fetch(`${endpoint}/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedObject),
+  });
+}
+
 function deleteTodo(id) {
   return fetch(`${endpoint}/${id}`, {
     method: 'DELETE',
@@ -28,5 +38,6 @@ function deleteTodo(id) {
 export default {
   getAll: getAll,
   create: create,
+  update: update,
   deleteTodo: deleteTodo,
 };

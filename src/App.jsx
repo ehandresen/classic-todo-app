@@ -42,8 +42,30 @@ const App = () => {
 
   // ID
   function handleId(event) {
-    const idInput = parseInt(event.target.value);
+    const idInput = event.target.value;
     setId(idInput);
+  }
+
+  // UPDATE
+  function handleUpdate() {
+    const newTodo = {
+      id: '249e',
+      text: 'Updated todo',
+      completed: true,
+    };
+
+    console.log(newTodo);
+
+    todoService.update(newTodo, newTodo.id);
+    console.log('updated');
+
+    /* const updatedTodo = {
+      id: id,
+      text: newTodo.text,
+      completed: newTodo.completed,
+    };
+
+    //todoService.update(updatedTodo, id); */
   }
 
   // DELETE
@@ -63,7 +85,13 @@ const App = () => {
       <h2>GET all todos</h2>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.text}</li>
+          <li key={todo.id}>
+            ID: {todo.id}
+            <br />
+            Text: {todo.text}
+            <br />
+            Completed: {todo.completed ? 'True' : 'False'}
+          </li>
         ))}
       </ul>
       <br />
@@ -75,6 +103,17 @@ const App = () => {
       <button onClick={handleAdd}>Add</button>
       <p>{newTodo.text}</p>
       <br />
+
+      {/* UPDATE */}
+      <h2>UPDATE todo</h2>
+      <label htmlFor="id">ID:</label>
+      <input onChange={handleId} type="text" id="id" />
+      <br />
+
+      <label htmlFor="text">Text:</label>
+      <input onChange={handleNewTodo} type="text" id="text" />
+
+      <button onClick={handleUpdate}>Update</button>
 
       {/* UPDATE  */}
       <h2>DELETE todo</h2>
