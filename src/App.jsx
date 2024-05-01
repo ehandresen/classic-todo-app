@@ -48,24 +48,26 @@ const App = () => {
 
   // UPDATE
   function handleUpdate() {
-    const newTodo = {
-      id: '249e',
-      text: 'Updated todo',
-      completed: true,
-    };
-
-    console.log(newTodo);
-
-    todoService.update(newTodo, newTodo.id);
-    console.log('updated');
-
-    /* const updatedTodo = {
+    const updatedTodo = {
       id: id,
       text: newTodo.text,
       completed: newTodo.completed,
     };
 
-    //todoService.update(updatedTodo, id); */
+    todoService.update(updatedTodo, id).then(() =>
+      setTodos((prevTodos) => {
+        return prevTodos.map((todo) => {
+          if (todo.id === updatedTodo.id) {
+            return {
+              ...todo,
+              text: updatedTodo.text,
+            };
+          } else {
+            return todo;
+          }
+        });
+      })
+    );
   }
 
   // DELETE

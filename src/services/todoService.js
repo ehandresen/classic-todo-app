@@ -20,7 +20,7 @@ function create(newObject) {
 }
 
 function update(updatedObject, id) {
-  fetch(`${endpoint}/${id}`, {
+  return fetch(`${endpoint}/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
