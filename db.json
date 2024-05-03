@@ -19,6 +19,11 @@
       "id": "a6ed",
       "text": "NEW TODO",
       "completed": false
+    },
+    {
+      "id": "548e",
+      "text": "new todo",
+      "completed": true
     }
   ]
 }
